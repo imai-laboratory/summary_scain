@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "*"
+tiktoken = "*"
+requests = "*"
+openpyxl = "*"
+xlrd = "*"
+pandas = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "*"
+
+[scripts]
+evaluation = "python ./src/evaluation.py"
+setup = "python ./src/setup.py"
