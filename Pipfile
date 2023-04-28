@@ -10,8 +10,11 @@ requests = "*"
 openpyxl = "*"
 xlrd = "*"
 pandas = "*"
+numpy = "*"
+matplotlib = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "*"

@@ -1,4 +1,6 @@
 dat/*
+log/*
+results/*
 .\#*
 *~
 !.gitkeep
