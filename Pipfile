@@ -12,6 +12,7 @@ xlrd = "*"
 pandas = "*"
 numpy = "*"
 matplotlib = "*"
+scipy = "*"
 
 [dev-packages]
 ipykernel = "*"

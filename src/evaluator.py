@@ -57,7 +57,8 @@ class Evaluator():
         params = self.params
 
         if params.GPT_MODEL_COMPLETION == "gpt-3.5-turbo":
-            prompt = prompts.summary_chat_ja(dialogue, sentence)
+            #prompt = prompts.summary_chat_ja(dialogue, sentence)
+            prompt = prompts.paraphrase_chat_ja(dialogue, sentence)
         elif params.GPT_MODEL_COMPLETION == "text-davinci-003":
             prompt = prompts.summary_comp_ja(dialogue, sentence)
         else:

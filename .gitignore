@@ -1,6 +1,8 @@
+udline.sty
 dat/*
 log/*
 results/*
+forms/*
 .\#*
 *~
 !.gitkeep

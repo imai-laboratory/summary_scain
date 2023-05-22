@@ -17,13 +17,13 @@ class Params:
     DIALOGUE_PATH = "./dat/"
     DIALOGUE_FILENAME = "PP"
     SPEAKERS = ["A: ", "B: "]
-    DIALOGUE_START = 97
+    DIALOGUE_START = 89
     DIALOGUE_END = 100
     MAX_TOKENS = 200
     TEMPERATURE = 0
     STOP_WORDS = "\n"
     USE_DUMMY = 0
-    RESULTS_PATH = "./results/"
+    RESULTS_PATH = "./results/generation/paraphrase_chat/"
 
 if __name__ == "__main__":
     params = Params()
