@@ -1,9 +1,10 @@
 import os
 import datetime
+import time
 import csv
 import tiktoken
 import logging
-import evaluator
+import extractor
 
 logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt = '%m/%d/%Y %H:%M:%S',
@@ -17,13 +18,13 @@ class Params:
     DIALOGUE_PATH = "./dat/"
     DIALOGUE_FILENAME = "PP"
     SPEAKERS = ["A: ", "B: "]
-    DIALOGUE_START = 89
+    DIALOGUE_START = 0
     DIALOGUE_END = 100
     MAX_TOKENS = 200
     TEMPERATURE = 0
     STOP_WORDS = "\n"
     USE_DUMMY = 0
-    RESULTS_PATH = "./results/generation/paraphrase_chat/"
+    RESULTS_PATH = "./results/generation/important_chat/"
 
 if __name__ == "__main__":
     params = Params()
@@ -45,21 +46,26 @@ if __name__ == "__main__":
         with open(params.DIALOGUE_PATH + filename) as f:
             dialogue = [s.rstrip() for s in f.readlines()]
 
-        ev = evaluator.Evaluator(params, encoding, dialogue, filename)
-        n_token = ev.evaluate()
+        ex = extractor.SCAINExtractor(params, encoding, dialogue, filename)
+        #ex = extractor.ImportantExtractor(params, encoding, dialogue, filename)
+        n_token = ex.extract()
         logger.info("------ number of tokens: {}".format(n_token))
         n_tokens.append(n_token)
-        results.extend(ev.results)
+        results.extend(ex.results)
+
+        # Wait to avoid overloading
+        time.sleep(3)
         
         # Save results for each dialogue
         dt_now = datetime.datetime.now()
         results_filename = params.RESULTS_PATH + dt_now.strftime("%Y%m%d_%H%M%S") + ".csv"
         with open(results_filename, "w") as f:
             writer = csv.writer(f)
-            writer.writerows(ev.results)
+            writer.writerows(ex.results)
 
     logger.info("------ number of total tokens: {}".format(sum(n_tokens)))
 
+    # Save results at once
     # dt_now = datetime.datetime.now()
     # results_filename = params.RESULTS_PATH + dt_now.strftime("%Y%m%d_%H%M%S") + ".csv"
     # with open(results_filename, "w") as f:

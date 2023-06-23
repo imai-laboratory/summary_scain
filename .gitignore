@@ -6,3 +6,4 @@ forms/*
 .\#*
 *~
 !.gitkeep
+!results/survey/*
