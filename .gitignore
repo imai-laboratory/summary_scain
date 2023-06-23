@@ -3,6 +3,7 @@ dat/*
 log/*
 results/*
 forms/*
+tmp/*
 .\#*
 *~
 !.gitkeep
