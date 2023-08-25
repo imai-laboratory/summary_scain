@@ -13,6 +13,8 @@ pandas = "*"
 numpy = "*"
 matplotlib = "*"
 scipy = "*"
+statsmodels = "*"
+pingouin = "*"
 
 [dev-packages]
 ipykernel = "*"
@@ -23,3 +25,4 @@ python_version = "*"
 [scripts]
 extraction = "python ./src/extraction.py"
 setup = "python ./src/setup.py"
+assistant = "python ./src/assistant.py"
