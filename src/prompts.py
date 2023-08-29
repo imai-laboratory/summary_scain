@@ -25,3 +25,8 @@ def assist_chat_ja(joined_dialogue):
     system = "あなたは対話を補助するAIです．\nAとBの対話をCが聞いています．\n対話を補助するAIとして，対話の後に続けてCの発言を促してください．\n「AI: 」の後にあなたの発言を書いてください．"
     user_ut = joined_dialogue
     return system, user_ut
+
+def rephrase_chat_en(dialogue, sentence):
+    joined_dialogue = "\n".join(dialogue)
+    prompt = f"Rephrase a particular statement in a dialogue into a more specific statement.\nA dialogue between two speakers is written and one of the statements is assigned to be rephrased.\nRephrase the assigned statement into a more specific statement using the words in the dialogue.\n\n# Dialogue\n{joined_dialogue}\n\n# Statement to be rephrased\n{sentence}\n\n# rephrased statement\n"
+    return prompt
