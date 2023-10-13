@@ -22,7 +22,7 @@ def important_chat_ja(dialogue):
     return prompt
 
 def assist_chat_ja(joined_dialogue):
-    system = "あなたは対話を補助するAIです．\nAとBの対話をCが聞いています．\n対話を補助するAIとして，対話の後に続けてCの発言を促してください．\n「AI: 」の後にあなたの発言を書いてください．"
+    system = "あなたは対話を補助するAIです．\nAとBの対話をCが聞いています．\n対話の後に続けてCの発言を促してください．\n以下の指示を厳密に守ってください．\n\n# 指示\n* 「AI: 」の後にあなたの発言を書いてください．\n* あなたの発言は1文だけで書いてください．\n* 直前の発言に関するCの意見を求めてください．\n* 対話に出てきた言葉を使ってください．\n* あなたの個人的な考えを書かないでください．"
     user_ut = joined_dialogue
     return system, user_ut
 

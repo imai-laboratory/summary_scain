@@ -7,7 +7,7 @@ import time
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class Params:
-    GPT_MODEL_COMPLETION = "gpt-3.5-turbo"
+    GPT_MODEL_COMPLETION = "gpt-4"
     CSV_PATH = "./forms/"
     SPEAKERS = ["A: ", "B: "]
     CSV_START = 0
