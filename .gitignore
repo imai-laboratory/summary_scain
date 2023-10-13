@@ -10,10 +10,10 @@ tmp/*
 !results/survey
 !results/extraction
 results/extraction/important_chat/*
-!results/extraction/important_chat/.gitignore
+!results/extraction/important_chat/.gitkeep
 results/extraction/paraphrase_chat/*
-!results/extraction/paraphrase_chat/.gitignore
+!results/extraction/paraphrase_chat/.gitkeep
 results/extraction/summary_chat/*
-!results/extraction/summary_chat/.gitignore
+!results/extraction/summary_chat/.gitkeep
 results/extraction/topic_shift/*
-!results/extraction/topic_shift/.gitignore
+!results/extraction/topic_shift/.gitkeep
