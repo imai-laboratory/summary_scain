@@ -2,17 +2,21 @@ import os
 import datetime
 import json
 import ast
+import re
+from time import sleep
+from unittest import result
 import openai
 import logging
 import prompts
 import utils
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
+# openai.api_key = ""
 
-logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
-                    datefmt = '%m/%d/%Y %H:%M:%S',
-                    level = logging.DEBUG)
-logger = logging.getLogger(__name__)
+# logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
+#                     datefmt = '%m/%d/%Y %H:%M:%S',
+#                     level = logging.DEBUG)
+# logger = logging.getLogger(__name__)
 
 class Extractor():
     def __init__(self, params, encoding, dialogue, dialogue_id):
@@ -40,20 +44,20 @@ class Extractor():
                 prompt=prompt,
                 max_tokens=params.MAX_TOKENS,
                 temperature=params.TEMPERATURE,
-                stop=params.STOP_WORDS
+                #stop=params.STOP_WORDS
             )
         else:
-            logger.error("GPT model name is inappropriate")
+            #logger.error("GPT model name is inappropriate")
             exit()
 
         # Save log
-        dt_now = datetime.datetime.now()
-        log_filename = "./log/" + dt_now.strftime("%Y%m%d_%H%M%S") + ".txt"
-        dict_log = {"prompt": prompt}
-        dict_log.update(completion)
-        json_log = json.dumps(dict_log, indent=4, ensure_ascii=False)
-        with open(log_filename, "w") as f:
-            f.write(json_log)
+        # dt_now = datetime.datetime.now()
+        # log_filename = "./log/" + dt_now.strftime("%Y%m%d_%H%M%S") + ".txt"
+        # dict_log = {"prompt": prompt}
+        # dict_log.update(completion)
+        # json_log = json.dumps(dict_log, indent=4, ensure_ascii=False)
+        # with open(log_filename, "w") as f:
+        #     f.write(json_log)
 
         return completion
 
@@ -136,7 +140,7 @@ class SCAINExtractor(Extractor):
         
         return similarity
     
-class ImportantExtractoror(Extractor):
+class ImportantExtractor(Extractor):
     def evaluate(self):
         important_sentences = self.detect_important_sentences(self.dialogue)
         result = [self.dialogue_id] + important_sentences # [self.dialogue_id, important_sentence_id[1], important_sentence_id[2]]
@@ -157,3 +161,51 @@ class ImportantExtractoror(Extractor):
         important_sentences_str = response.get("choices")[0].get("message").get("content")
         important_sentences_list = list(ast.literal_eval(important_sentences_str))
         return important_sentences_list
+
+class InterpretationExtractor(Extractor):
+    def interpretation(self, n, A_condition, B_condition):
+        params = self.params
+        interpretationsA=[]
+        interpretationsB=[]
+        values=[]
+        for i in range(1, n+1):
+            if (i % 2 == 1):
+                promptA = prompts.interpretation_A_A(self.dialogue, i, A_condition, B_condition)
+                promptB = prompts.interpretation_A_B(self.dialogue, i, A_condition, B_condition)
+            else:
+                promptA = prompts.interpretation_B_A(self.dialogue, i, A_condition, B_condition)
+                promptB = prompts.interpretation_B_B(self.dialogue, i, A_condition, B_condition)
+
+            if params.USE_DUMMY == 1:
+                responseA = utils.dummy_completion(promptA, encoding=self.encoding)
+                responseB = utils.dummy_completion(promptB, encoding=self.encoding)
+            else:
+                responseA = self.openai_api_completion(promptA)
+                responseB = self.openai_api_completion(promptB)
+
+            interpretationA = responseA.get("choices")[0].get("text")
+            interpretationB = responseB.get("choices")[0].get("text")
+            similarity = self.calc_similarity(interpretationA, interpretationB)
+            #result = [self.dialogue_id, i, "Aの解釈", interpretationA, "Bの解釈", interpretationB, similarity]
+            interpretationsA.append(interpretationA)
+            interpretationsB.append(interpretationB)
+            values.append(round(similarity*100, 2))
+
+        return [interpretationsA, interpretationsB, values]
+    def calc_similarity(self, sentence1, sentence2):
+        params = self.params
+
+        if params.USE_DUMMY == 1:
+            similarity = 1
+        else:
+            embedding1 = openai.Embedding.create(
+                input=sentence1,
+                model=params.GPT_MODEL_EMBEDDING
+            )["data"][0]["embedding"]
+            embedding2 = openai.Embedding.create(
+                input=sentence2,
+                model=params.GPT_MODEL_EMBEDDING
+            )["data"][0]["embedding"]
+            similarity = utils.cosine_similarity(embedding1, embedding2)
+        
+        return similarity

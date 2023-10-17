@@ -15,6 +15,7 @@ matplotlib = "*"
 scipy = "*"
 statsmodels = "*"
 pingouin = "*"
+flask = "*"
 
 [dev-packages]
 ipykernel = "*"

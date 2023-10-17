@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <title>Mutual understanding</title>
+</head>
+<body>
+    <h1 class="main-title">Mutual understanding</h1>
+    <form method="post" class="condition">
+        <label for="input">Enter A's condition:</label>
+        <input type="text" id="A_Condition" name="A_Condition">
+        <p></p>
+        <label for="input">Enter B's condition:</label>
+        <input type="text" id="B_Condition" name="B_Condition">
+        <p></p>
+        <center>
+            <button type="submit" name="action" value="generate">Check for mutual understanding</button>
+            <button id="reloadButton" type="submit" name="action" value="reset">reset</button>
+        </center>
+    </form>
+    <div class="selection">
+        <form method="post" class="center">
+            <select name="conversation">
+                <option value="unselected">会話文の選択</option>
+                <option value="PP0">PP0.txt</option>
+                <option value="PP4">PP4.txt</option>
+            </select>
+            <input type="submit" value="選択">
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th >会話文</th>
+                <th >相互理解度</th>
+            </tr>
+        </thead>
+        {% for log , values in dialogue%}
+        <tr>
+            <td>{{ log }}</td>
+            <td>{{ values }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <!-- <h3 class="center">{{ dialogue }}</h3> -->
+    {% if A_CONDITION and B_CONDITION%}
+        <h4>Aの条件：{{ A_CONDITION }}</h4>
+        <h4>Bの条件：{{ B_CONDITION }}</h4>
+    {% endif %}
+    {% for resultA, resultB in output%}
+        <h3 class="center">Aの解釈：{{ resultA }}</h3>
+        <h3 class="center">Bの解釈：{{ resultB }}</h3>
+    {% endfor %}
+    <script>
+        document.getElementById('reloadButton').addEventListener('click', function () {
+            location.reload();
+        });
+    </script>
+</body>
+</html>
