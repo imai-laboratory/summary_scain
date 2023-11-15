@@ -17,8 +17,8 @@ logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(messa
 logger = logging.getLogger(__name__)
 
 class Params:
-    #GPT_MODEL_COMPLETION = "gpt-3.5-turbo"
-    GPT_MODEL_COMPLETION = "text-davinci-003"
+    GPT_MODEL_COMPLETION = "gpt-3.5-turbo"
+    #GPT_MODEL_COMPLETION = "text-davinci-003"
     GPT_MODEL_EMBEDDING = "text-embedding-ada-002"
     DIALOGUE_PATH = "./dat/"
     DIALOGUE_FILENAME = "PP"
@@ -38,34 +38,6 @@ class Params:
         type(self).FILEPATH = type(self).DIALOGUE_PATH + type(self).FILENAME
         print(type(self).FILENAME)
         print(type(self).FILEPATH)
-
-def dialogue():
-    params = Params()
-    with open(params.FILEPATH) as f:
-        dialogue = [s.rstrip() for s in f.readlines()]
-    return dialogue
-
-def generate(A_CONDITION, B_CONDITION):
-    params = Params()
-
-    # Encoder
-    encoding = tiktoken.encoding_for_model(params.GPT_MODEL_COMPLETION)
-
-    file_path = params.DIALOGUE_PATH + params.FILENAME
-    with open(file_path) as f:
-        dialogue = [s.rstrip() for s in f.readlines()]
-    ex = extractor.InterpretationExtractor(params, encoding, dialogue(), params.FILEPATH)
-    #results = ex.interpretation(sum([1 for _ in open(file_path)]), params.A_CONDITION, params.B_CONDITION)
-
-    time.sleep(3)
-
-    dt_now = datetime.datetime.now()
-    results_filename = params.RESULTS_PATH + dt_now.strftime("%Y%m%d_%H%M%S") + ".csv"
-    with open(results_filename, "w") as f:
-        writer = csv.writer(f)
-        writer.writerows(results)
-    
-    return results
 
 if __name__ == "__main__":
     params = Params()
