@@ -67,8 +67,8 @@ if __name__ == "__main__":
     logger.info("------ number of total tokens: {}".format(sum(n_tokens)))
 
     # Save results at once
-    # dt_now = datetime.datetime.now()
-    # results_filename = params.RESULTS_PATH + dt_now.strftime("%Y%m%d_%H%M%S") + ".csv"
-    # with open(results_filename, "w") as f:
-    #     writer = csv.writer(f)
-    #     writer.writerows(results)
+    dt_now = datetime.datetime.now()
+    results_filename = params.RESULTS_PATH + dt_now.strftime("%Y%m%d_%H%M%S") + ".csv"
+    with open(results_filename, "w") as f:
+        writer = csv.writer(f)
+        writer.writerows(results)

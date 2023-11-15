@@ -30,23 +30,3 @@ def rephrase_chat_en(dialogue, sentence):
     joined_dialogue = "\n".join(dialogue)
     prompt = f"Rephrase a particular statement in a dialogue into a more specific statement.\nA dialogue between two speakers is written and one of the statements is assigned to be rephrased.\nRephrase the assigned statement into a more specific statement using the words in the dialogue.\n\n# Dialogue\n{joined_dialogue}\n\n# Statement to be rephrased\n{sentence}\n\n# rephrased statement\n"
     return prompt
-
-def interpretation_A_A(dialogue, n, A_condition, B_condition):
-    joined_dialogue = "\n".join(dialogue)
-    prompt = f"以下はAとBの2人の会話文です．この会話文の{n}文目の発言をAはどのような意図で発言しているかを一文で簡潔に述べてください．\nただしAは{A_condition}，Bは{B_condition}とする．\n\n{joined_dialogue}"
-    return prompt
-
-def interpretation_A_B(dialogue, n, A_condition, B_condition):
-    joined_dialogue = "\n".join(dialogue)
-    prompt = f"以下はAとBの2人の会話文です．この会話文の{n}文目のAの発言の意図をBはどのように解釈しているかを一文で簡潔に述べてください．\nただしAは{A_condition}，Bは{B_condition}とする．\n\n{joined_dialogue}"
-    return prompt
-
-def interpretation_B_A(dialogue, n, A_condition, B_condition):
-    joined_dialogue = "\n".join(dialogue)
-    prompt = f"以下はAとBの2人の会話文です．この会話文の{n}文目のBの発言の意図をAはどのように解釈しているかを一文で簡潔に述べてください．\nただしAは{A_condition}，Bは{B_condition}とする．\n\n{joined_dialogue}"
-    return prompt
-
-def interpretation_B_B(dialogue, n, A_condition, B_condition):
-    joined_dialogue = "\n".join(dialogue)
-    prompt = f"以下はAとBの2人の会話文です．この会話文の{n}文目の発言をBはどのような意図で発言しているかを一文で簡潔に述べてください．\nただしAは{A_condition}，Bは{B_condition}とする．\n\n{joined_dialogue}"
-    return prompt
