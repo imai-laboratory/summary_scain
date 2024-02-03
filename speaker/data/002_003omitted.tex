@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: ねえ、今日ランチ一緒に行かない？
+
+B: いいですけど、それって、デートのお誘いですか？
+
+A: そういうわけじゃなかったんですけど。しかもわたしすごくお腹減ってるから生姜焼きなんでどうですかって言おうとしたぐらいですし。
+
+B: いいですね！生姜焼きは、わたしも好きですよ。手作りだったら、なお最高です。ところで、あなたは独身ですか？
+
+A: わたしも生姜焼き好きでよく作りますけどあなたには作りませんよ？独身ですけど、、さっきからなんか変じゃありません？
+
+B: いや、これは失礼！こういうことするから、いくつになっても独身のままなんだな。
+
+A: そういうところだと思いますよ！わたしの尊敬する先輩とあなたが仲がいいからわたしも親しくさせてもらってるだけですから！
+
+B: そうですか？とてもモテるように見えますよ！わたしの好きな雪景色のなかに佇んでたら、とっても絵になりそうです。
+
+A: どうもありがとうございます、、
+
+B: ああ、またやっちまったかな。申し訳なかった。気を取り直してランチに行きましょう！
+
+A: \ul{あなたの奢りですからね！}\end{hangall}
+\end{document}  

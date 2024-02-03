@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: ねえねえ、あなたの血液型って何？
+
+B: ガタガタ！なんていうのは、昭和の親父ぐらいかな。
+
+A: 面白くなーい！せっかく血液型占いしてあげようと思ったのに。ところで、わたしって何型だと思う？
+
+B: うーん、４択だよね。でも、わたし、人の目を見れないから、あなたのことが全然わからないよ。
+
+A: 恥ずかしいの？じゃあヒント！わたしのことを大らかという人が多いです。これならどう？
+
+B: 大らかっていうぐらいだから、オオ型だんだろうね？ごめんね。初対面の人だとどうしても緊張して、変なことを言っちゃうんだ。
+
+A: 緊張なんてしなくていいのに！わたしが住んでる田舎なんて初対面なのにみんな親戚みたいに声かけてくるよ。正解！わたしの血液型はO型でーす！
+
+B: ふーん。そうかい。それで？
+
+A: 一人でプラモデルなんてあとでいいじゃん！お話ししようよ！
+
+B: もう、しつこいなあ。じゃあ、話をする代わりに、名古屋めし食うの、付き合ってくれるかい？
+
+A: \ul{全然おっけー！}\end{hangall}
+\end{document}  

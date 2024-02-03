@@ -1,0 +1,47 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: あ、どうも！今日は天気予報で雨って言ってたから、洗濯物は外に干さないほうがイイですよ！
+
+B: そうなんですね？なんだか虫歯が痛むのはそのせいかな？
+
+A: えっ、虫歯があるんですか？大丈夫？
+
+B: そうなんです。でも歯医者が怖くて行かずにいたら悪化しちゃいました。
+
+A: あら、それはまずいですよ。虫歯があると口臭がきつくなるでしょ？わたし、人と話すのは好きですけど、そういうのはちょっと。。。
+
+B: え、虫歯って口臭にも関係あるんですか！？そんなこと言われるとすぐにでも治さないとって思いますね。あーでもやっぱり怖いなー。
+
+A: 頑張って！なにか、好きな音楽とかを聞いたら、勇気がわくんじゃないかしら？
+
+B: 好きな音楽とかは特にないんだけど、こんな時わたしの尊敬するナイチンゲールみたいなお医者さんだったら勇気が出るかも。あなたは音楽よく聴くの？
+
+A: 家で音楽を聞くと、昔飼ってたハムスターが嫌がったので、聞かなくなっちゃいました。オススメとかはあります？
+
+B: クラシックをよく聴いてたけど最近は全く。あなたは元気出したい時何するの？
+
+A: 元気を出したいときは。鏡に向かってニッコリ笑うようにしてます。えくぼが出来て、自分で言うのもなんですが、チャーミングなんですよ！ふふふ！
+
+B: \ul{いいなそういうの！わたしも真似してみよう！}\end{hangall}
+\end{document}  

@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: ねえ、ちょっと話、聞いてくれる？
+
+B: どうしたの？
+
+A: 彼氏がさあ、わたしの関西弁をすごく嫌がるんだよね。オバチャンみたいっていうの。
+
+B: わたしは近畿に地方に住んでるから全然そんなこと思わないけどそれちょっとひどいね
+
+A: ひどいよねー！でもさ、高卒で、しかも気分屋のわたしと付き合ってくれる男性なんて、そうそういないしなあ。
+
+B: 関係ないと思うけどな。わたしは大卒だけど同級生は高卒の子と結婚したよ。とりあえず元気出して！
+
+A: ありがとう！あ！そういえば、もっと酷いことを言われたの思い出しちゃった！
+
+B: さらに！？
+
+A: そう？そうかな？わたしたちカップルって、これからもうまくやっていけると思う？
+
+B: \ul{意外にお似合いなのかもね！}\end{hangall}
+\end{document}  

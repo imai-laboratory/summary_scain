@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。わたし、銀行に勤めてるんですけど、最近石川県の方に転勤してきたんですよ。よろしくお願いします。
+
+B: こちらこそ、よろしくお願いします。外から来ると、石川って、方言がきつく聞こえます？
+
+A: そうですか？今のところは、そんなに気になったことないですけど。でも、わたし、断るのが苦手なくらい引っ込み思案なので、きつく言ってもらった方が助かるかも。
+
+B: そうだったんですか。銀行勤めで断るのが苦手だと、業務に支障ないですか？
+
+A: そうなんですよ。頼まれたら引き受けちゃうので、仕事が忙しくって。まぁ、その分評判は良いのかもしれませんけど。
+
+B: なるほど！評判が良いのは羨ましいな。わたしはホームヘルパーをやってるんですが、お年寄りからちょっと怖がられるんですよ。
+
+A: そうなんですか？意外です。どうしてだろう？
+
+B: どうやら、胸板が厚くて、いかつく見えるみたいなんです。初対面では怖がられますが、将棋が得意なので、それでプラマイゼロかな。
+
+A: ボードゲームっていう意味では似てますよね。趣味がゲームなので、将棋もできますよ！今度一緒に勝負してみたいですね。
+
+B: \ul{ええ、ぜひ勝負したい！次の七夕の日は、わたしの誕生日で有給をとっているので、その時にお手合わせ願いたいな！}\end{hangall}
+\end{document}  

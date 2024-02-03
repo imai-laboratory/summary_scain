@@ -1,0 +1,33 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは！わたしは今趣味のDIYにハマっているのだけど、あなたもなにかハマっていることとかあります？
+
+B: DIYなんて、すごいじゃないですか！私は滋賀で開業医を営んでいますが、趣味はゴルフですね。
+
+A: うらやましい！わたしは事務職に就いているんですが、毎日同じことの繰り返して少し退屈してるんです。
+
+B: 医者も同じようなものですよ。お互い、気分転換が必要ですね。
+
+A: \ul{ええ、そうですね。ゴルフなんてちょっと憧れてしまうけど、どうです？やっぱり難しいですか？}\end{hangall}
+\end{document}  

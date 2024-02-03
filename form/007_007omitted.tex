@@ -1,0 +1,41 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは、近頃寒いですがお元気ですか？
+
+B: はい、おかげさまでとても元気ですよ！スポーツが好きで、観戦するのも自分でやるのも好きですね。最近はテニスがお気に入りです。
+
+A: スポーツ好きなのですね。わたし体を動かすのがとっても苦手で。雪かきが得意って言えるくらい腕力と体力はあるんですけど。
+
+B: 雪かきですか！寒い地域にお住まいなんですか？
+
+A: 長野で生まれ育ちましたよ。あなたはどちらにお住まいですか？
+
+B: そうなんですか、少し似ているお仕事ですね。ご趣味は何かありますか？
+
+A: 今趣味を探しているところなんです。あなたの趣味は何かありますか？
+
+B: わたしはずっとスポーツ一筋ですね。今は観戦とテニスですが、昔はバレーボール部の主将を務めるほどでした。
+
+A: \ul{テニスもバレーボールもできてすごいです。わたしもあなたを見習って運動を始めてみることにします！}\end{hangall}
+\end{document}  

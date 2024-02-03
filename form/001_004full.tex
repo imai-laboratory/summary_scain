@@ -1,0 +1,47 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは！私は大阪在住で、たこ焼きを焼くのが得意なんですが、何か趣味とかありますか？
+
+B: たこやきおいしいですよね。私は和歌山に住んでいて、ツーリングをよくしますね。
+
+A: 和歌山なら大阪に近いですね。ツーリングは楽しそう。わたしはたこ焼きを食べる以外には、本を読むことが趣味なんです。
+
+B: すごいですね。私は文字が苦手で、仕事も肉体労働をしています。本を読める人は尊敬します。
+
+A: アクティブな方なんですね、わたしは翻訳家をしていて、あまり家から出ないので、活発な方が羨ましいです。
+
+B: そうなんですね。確かに活発で、仕事以外でも、アニメの聖地巡礼とかで色々なところを廻ったりしてます。
+
+A: 多趣味なんですね、わたしは細かい作業や暗記など、ちまちました作業が得意なのか、活動的な人に憧れますね。
+
+B: 器用なんですね。私は活発な反面マイペースだと言われてしまうこともあります。
+
+A: マイペースが一番だと思いますよね。わたしがインドア派なのは実はマイペースだからかもしれません。
+
+B: そうかもしれませんね。今の時期は外にも出にくいので、インドアな趣味も見つけていきたいです。
+
+A: そうですね、家でできる趣味があると、気軽にストレス発散ができそうな気がします。
+
+B: \ul{ええ、そうだと思います。}\end{hangall}
+\end{document}  

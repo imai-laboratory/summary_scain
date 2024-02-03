@@ -1,0 +1,41 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは！お元気されてましたか？
+
+B: はい、最近仕事の関係で一人暮らしを始めたんですが、快適に過ごしています。あなたはどうですか？
+
+A: 一人暮らしですか！わたしは自衛隊に所属しているのですが、お互い、自分を律して暮らすのは大変ですよね！
+
+B: 自衛隊員の方ですか、いつもご苦労様です。確かに自分を律して暮らすのは大変ですね。
+
+A: ええ。自分のことに責任をしっかり持って生活せねばなりませんからね。あなたは今は何をされてるんですか？
+
+B: わたしは今スタイリストをしていまして、常に流行には敏感でいなくてはなと思っていますよ。
+
+A: 誕生日は、人に言うと、いつもからかわれるんですが、4月1日のエイプリルフールなんですよ。
+
+B: 珍しい誕生日ですね、あまりいなそうで反対に覚えてもらえそうですね。
+
+A: \ul{ああ、ものは考えようですね！これからは、あなたのおっしゃるように、ポジティブに捉えたいと思います。}\end{hangall}
+\end{document}  

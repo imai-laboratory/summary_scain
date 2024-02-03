@@ -10,7 +10,8 @@ def summary_comp_ja(dialogue, sentence):
 
 def rephrase_chat_ja(dialogue, sentence):
     joined_dialogue = "\n".join(dialogue)
-    prompt = f"会話文中のある発言を具体的に言い換えます．\nAとBの2人の会話文が入力され，言い換えの対象となる発言が指定されます．\n指定された発言を，会話文中の言葉を使ってより具体的に言い換えます．\n\n# 会話文\n{joined_dialogue}\n\n# 言い換える発言\n{sentence}\n\n# 具体的な発言\n"
+    # prompt = f"会話文中のある発言を具体的に言い換えます．\nAとBの2人の会話文が入力された後に，言い換えの対象となる発言が指定されます．\n指定された発言を，会話文中の言葉を使ってより具体的に言い換えます．\n\n# 会話文\n{joined_dialogue}\n\n# 言い換える発言\n{sentence}\n\n# 具体的な発言\n"
+    prompt = f"会話文中のある発言を具体的に言い換えます．\nAとBの2人の会話文が入力された後に，言い換えの対象となる発言が指定されます．\n指定された発言がどういうことを言っているのかを，より具体的に言い換えることで説明します．\n\n# 会話文\n{joined_dialogue}\n\n# 言い換える発言\n{sentence}\n\n# 具体的な発言\n"
     return prompt
 
 def important_chat_ja(dialogue):
@@ -29,4 +30,9 @@ def assist_chat_ja(joined_dialogue):
 def rephrase_chat_en(dialogue, sentence):
     joined_dialogue = "\n".join(dialogue)
     prompt = f"Rephrase a particular statement in a dialogue into a more specific statement.\nA dialogue between two speakers is written and one of the statements is assigned to be rephrased.\nRephrase the assigned statement into a more specific statement using the words in the dialogue.\n\n# Dialogue\n{joined_dialogue}\n\n# Statement to be rephrased\n{sentence}\n\n# rephrased statement\n"
+    return prompt
+
+def summary_ja(dialogue):
+    joined_dialogue = "\n".join(dialogue)
+    prompt = f"以下はAとBの2人の会話です．この会話を2文程度で説明してください．\n\n{joined_dialogue}"
     return prompt

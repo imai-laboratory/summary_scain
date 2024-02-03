@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: はあー！今日も一日お疲れさま！いい一日だった？
+
+B: お疲れ様。良い一日だったけどさ、太ってるわたしには、疲れる一日だったわ。
+
+A: お互い大変だよねー。わたしの方は、急なお産が3件も入って、ヘトヘト！でも爽快な気分！
+
+B: お産が３件も！そりゃやり遂げたって感じだね！本当にお疲れ様！ところで、カレーって好き？
+
+A: 好き好き！わたしのよく行くカラオケ店で出るカレーが、じつは隠れた名品なの！
+
+B: そうなんだ。わたし、料理が好きで、カレーライスを作るのが得意なんだけど、良かったら今度食べにこない？
+
+A: あー、それは、お互い言わないことにしとこ！わたしもさあ、ひな祭りに生まれたせいか、あられを食べ始めると止まらないんだわ。
+
+B: あられかぁ。あれは自分で作らないけど、美味しいもんね。やめられない止まらない！
+
+A: そうそう、それそれ！わたし、富山に嫁いできて友達がなかなかできなかったけど、あなたみたいな知り合いができて嬉しい！
+
+B: \ul{ほんとー？そういってもらえると嬉しいな！これからもよろしくね！}\end{hangall}
+\end{document}  

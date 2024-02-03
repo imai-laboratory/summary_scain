@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。わたしは警備員の仕事をしているのですが、あなたはどんな方ですか？
+
+B: こんにちは。わたしはハヤシライス専門店で働いているんですよ。
+
+A: 専門店のハヤシライスって、美味しそうですね！
+
+B: もちろん！でも専門店だけあって、メニューはハヤシライスただ一品！お陰で安月給なのが悩みなんですよ、とほほ。
+
+A: そうなんですか。安月給は、わたしも同じです。一家の大黒柱として頑張っていますが、お金持ちになる夢には程遠い収入でして。
+
+B: わたしもです。外国暮らしに憧れて貯金を頑張っているのですが、一体いつになることやらって感じです。
+
+A: お互い、大変ですね。ところで、動物はお好きですか？わたし、カメを飼ってるんです。
+
+B: ええ！カメを！それは珍しいですね。動物は好きですが、カメはまだ触ったことすらありません。
+
+A: あはは、そうかもしれませんねぇ。今度、ペットを飼うときはカメも候補に入れてあげてくださいね。
+
+B: \ul{そうですね！その時はまたご相談させてくださいね！}\end{hangall}
+\end{document}  

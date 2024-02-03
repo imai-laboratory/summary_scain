@@ -1,0 +1,51 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。田舎暮らしが長いけど、今年は暖かくていい気候だね。
+
+B: ほんとだね。とか言って、インドア派のわたしは、いつでも快適な家の中でばかり、過ごしてるんだけどね！
+
+A: そうなんだ。わたしもね、家の中で過ごすのは好きよ。でも、狭い場所が苦手だから、家は庭付きの吹き抜けのある家に住んでるんだけど。
+
+B: 素敵！そういう家で、音楽でもかけながら、ソーイングできたら幸せなんだろうなあ。
+
+A: ソーイングが好きなのー？わたしはガーデニングが趣味よ。
+
+B: ガーデニングも楽しそう！そうそう、この前さ、いつもみたいにミシンかけてたんだけど、、、
+
+A: うんうん、どうしたの？
+
+B: どうやっても、上糸がつっぱっちゃうんだよねー。でも、機械に疎いから、なにがどうなってるのか、さっぱりで。どうしよー、ミシンが使い物にならない！
+
+A: そんなの、叩いておけばなんとかなるって！って、それは昔のテレビか。わたし、時々適当すぎるのよね。みんなは大らかって言ってくれるけど。
+
+B: アハハ！叩く！なんか、子供の頃に転校した先の先生もそんなこと言ってたなー。
+
+A: そうそう、昔はね、叩けば電化製品なんて直ると思ってたのよ。先生もO型かしら？わたしもO型の大らかタイプなんだけど。
+
+B: いいよ、その性格。わたしは好き。わたしもO型って言いたいけど、わたしの場合、血液型が分からないから残念！
+
+A: そうなのー？あなたはきっと、まじめなA型かしらね。
+
+B: \ul{そうかもね！}\end{hangall}
+\end{document}  

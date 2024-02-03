@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: やあ！最近、調子はどう？私は、持ってた株がぐんぐん値上がりして、ウハウハ状態だよ！
+
+B: 良いなぁ！私はまだフリーター生活から脱出できてないよ。
+
+A: 私も似たようなものだよ。大学生だけど、サボりまくってるもん。
+
+B: そうなんだ？ってことは、学生で株始めたってことだよね！？すごくない！？
+
+A: まあね。付き合ってる彼女から手ほどきを受けたんだ。彼女はもう社会人なんだけど、財テクが趣味なの。
+
+B: へぇ。そんな彼女と付き合ってみたいもんだなぁ。私は長いこと、長崎に住んでるけど、彼女は全然できないよ。
+
+A: 長崎に住んでるんだね。私の彼女は福岡人だよ。あいにく、私は九州から遠く離れた東京の大学に通ってるんだ。
+
+B: そうだったんだ。良いなぁ、東京！私もいずれ上京するつもりなんだけど、まだ資金が貯まってないよー。
+
+A: 東京は、飲み屋さんがいっぱいあるから、お酒が飲める人にとっては楽しいかもね。私はアルコールが苦手だから、大して楽しめてないけど。
+
+B: 私もお酒はあんまり飲めないよ。暇なときは友達と飲むより、家でネットショッピングしてる方が好き。あなたは好きなものって、ある？
+
+A: \ul{うーん。反対に、嫌いなところはすぐに思いつくよ。この、骨と皮だけの身体をなんとかしたい！}\end{hangall}
+\end{document}  

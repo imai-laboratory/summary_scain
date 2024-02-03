@@ -1,0 +1,37 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: この数日、寒波がすごいですね。寒いのは平気なほうですか？
+
+B: わたしは暑い地域で生まれ育ったので寒いのは本当に苦手なんです。あなたは平気なんですか？
+
+A: ええ、わたしは寒い地域の生まれなので、このぐらいへっちゃらです。ご存じかなあ、牛タンで有名なところなんですけど。
+
+B: 羨ましいな。牛タンということは仙台ですか？
+
+A: おっしゃるとおり、寒いです。寒いせいで、口を開かないというか無口な人も多くて、わたしなんて無口で頑固な嫌なオヤジですよ！
+
+B: そうですか？そんな印象なかったですけどね。わたしは普段はおしゃべりな方なんですけど、熱中しやすい方で、何かに集中すると無口になっちゃいます。
+
+A: \ul{ほほう。たとえば、最近は、どんなことに熱中してますか？}\end{hangall}
+\end{document}  

@@ -1,0 +1,37 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは、お元気していましたか？
+
+B: はい、元気にしています。今、看護師を目指して千葉の看護学校に通っています。
+
+A: すごいですね、頑張ってくださいね！わたしは地元埼玉から、引っ越して東京で暮らしています。
+
+B: 東京ですか！時々遊びに行っています。看護師目指しているのに、実は注射苦手なのがネックです。
+
+A: ヨガもやってみたいですね。特にこれと言って趣味はないのですが、地図がちゃんと読めなくて、方向音痴の割に、街歩きが好きなんです。
+
+B: わたしも方向音痴なので、気持ちわかります。
+
+A: \ul{ですよね、なかなか道は覚えられません。お休みの日なんかは何をされているんですか？}\end{hangall}
+\end{document}  

@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: どうも、こんにちは。最近調子はどう？私のほうは、派遣先がようやく決まって、先週から通い始めたところ。
+
+B: そうだったんだ。良かったね！私は、相変わらず、主婦とパートをしているよ。
+
+A: いいなー、私も早く永久就職したいよー。私の長い指に惚れてくれる人、出てこないかなあ。
+
+B: 指輪が似合う素敵な指をしているのに、本当に残念だねぇ。わたし、負けず嫌いだから、はやく結婚できたのかも。
+
+A: なるほど！それじゃ、きっと素敵な旦那さんなんだろうね。間違っても、タバコとか吸わない人よね？
+
+B: 吸わない人だよ。どうして？
+
+A: だって、タバコ吸う人って、超臭いじゃん！私、人と争うのは嫌いだけど、もし好きな人がタバコを吸ってたら、絶対辞めてって言うと思う。
+
+B: そっかぁ。たばこの匂い、苦手なんだっけ。私は浪費家だけど、たばこにお金使われるのは嫌だなぁ。高いし。
+
+A: それもあるよね！わたしなんて、広告の裏に絵を描くのが好きなぐらいで、お金、全然使わないもん。
+
+B: \ul{広告の裏！すごい節約してるじゃん！私、以前、宮崎に住んでいたことがあるんだけど、近所の家で集まってはお酒飲んで、結構散財してたよ。}\end{hangall}
+\end{document}  

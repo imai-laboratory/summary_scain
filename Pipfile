@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-openai = "*"
+openai = "==0.28"
 tiktoken = "*"
 requests = "*"
 openpyxl = "*"
@@ -16,6 +16,8 @@ scipy = "*"
 statsmodels = "*"
 pingouin = "*"
 flask = "*"
+notebook = "*"
+natsort = "*"
 
 [dev-packages]
 ipykernel = "*"

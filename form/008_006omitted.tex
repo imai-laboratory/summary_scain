@@ -1,0 +1,39 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: ちょっと、聞いて！いまの派遣先に、超タバコ臭い人がいるの！
+
+B: それはやだなー。わたし香水の匂いが苦手だけどタバコも苦手。
+
+A: 同じ同じ！でもさ、わたし、派遣だからあまり強いこと言えないしさあ。
+
+B: そっか。わたしは専業主婦だからあまり共感してあげられないけど愚痴ならいくらでも聞くよ！
+
+A: ありがとー！あとね、なんかすっごいギスギスした職場で、みんなライバル意識むき出しで、超怖いのー！
+
+B: それは怖い！そんなところでよく働いてるね。偉いよ。
+
+A: 肩こりが酷いのは一緒！わたしの場合は絵を描いてるんだけど、つい没頭しちゃうんだ！
+
+B: \ul{素敵な趣味よね。今は何描いてるの？}\end{hangall}
+\end{document}  

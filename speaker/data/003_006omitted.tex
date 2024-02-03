@@ -1,0 +1,31 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: わたしは今川のそばに住んでるんですけど、よかったら遊びにきませんか？
+
+B: なるほど！団地のように集合住宅だと、冬も暖かいって聞きます。保険の外交で団地にはよく行きますが、みなさん、狭くても上手に工夫されて住んでますよね！
+
+A: そうなんですよ。わたし集中力があるので没頭すると耳に音が入ってこないので騒音で悩まされたこともないですし。あなたは実家ですか？
+
+B: \ul{いえ、実家ではないのですが、実家と同じ広島県内に住んでますよ！}\end{hangall}
+\end{document}  

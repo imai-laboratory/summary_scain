@@ -9,6 +9,7 @@ import openai
 import logging
 import prompts
 import utils
+import time
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -65,11 +66,12 @@ class SCAINExtractor(Extractor):
         for idx, sentence in enumerate(self.dialogue):
             if idx <= 2:
                 continue
-
             full_dialogue = self.dialogue[:idx+1]
             logger.debug("------ full dialogue: ")
             logger.debug(full_dialogue)
             omitted_dialogue = self.dialogue[:idx-2] + self.dialogue[idx:idx+1]
+            #知識文の挿入
+            #omitted_dialogue = self.dialogue[:idx-2] + self.summary(self.dialogue[idx-2:idx]) + self.dialogue[idx:idx+1]
             logger.debug("------ ommited dialogue: ")
             logger.debug(omitted_dialogue)
             core_sentence = sentence
@@ -77,10 +79,11 @@ class SCAINExtractor(Extractor):
                 core_sentence = core_sentence.removeprefix(speaker)
             logger.debug("------ core sentence: ")
             logger.debug(core_sentence)
-
+            # time.sleep(3)
             full_summary = self.rephrasing(full_dialogue, core_sentence)
             logger.debug("------ full summary: ")
             logger.debug(full_summary)
+            # time.sleep(3)
             omitted_summary = self.rephrasing(omitted_dialogue, core_sentence)
             logger.debug("------ omitted summary: ")
             logger.debug(omitted_summary)
@@ -91,7 +94,38 @@ class SCAINExtractor(Extractor):
 
         return self.n_total_token
     
+    def distance_extract(self):
+        for idx, sentence in enumerate(self.dialogue):
+            if idx <= 6:
+                continue
+            full_dialogue = self.dialogue[:idx+1]
+            logger.debug("------ full dialogue: ")
+            logger.debug(full_dialogue)
+            core_sentence = sentence
+            for speaker in self.params.SPEAKERS:
+                core_sentence = core_sentence.removeprefix(speaker)
+            logger.debug("------ core sentence: ")
+            logger.debug(core_sentence)
+            full_summary = self.rephrasing(full_dialogue, core_sentence)
+            logger.debug("------ full summary: ")
+            logger.debug(full_summary)
+
+            for j in range(4):
+                omitted_dialogue = self.dialogue[:idx-j-2] + self.dialogue[idx-j:idx+1]
+                logger.debug("------ ommited dialogue: ")
+                logger.debug(omitted_dialogue)
+                omitted_summary = self.rephrasing(omitted_dialogue, core_sentence)
+                logger.debug("------ omitted summary: ")
+                logger.debug(omitted_summary)
+                similarity = self.calc_similarity(full_summary, omitted_summary)
+                result = [self.dialogue_id, idx+1, full_summary, omitted_summary, similarity]
+                self.results.append(result)
+                time.sleep(3)
+
+        return self.n_total_token
+    
     def rephrasing(self, dialogue, sentence):
+        # time.sleep(3)
         params = self.params
 
         if params.GPT_MODEL_COMPLETION == "gpt-3.5-turbo":
@@ -120,6 +154,38 @@ class SCAINExtractor(Extractor):
             exit()
 
         return rephrased_statement
+    
+    def summary(self, dialogue):
+        # time.sleep(3)
+        params = self.params
+
+        if params.GPT_MODEL_COMPLETION == "gpt-3.5-turbo":
+            prompt = prompts.summary_ja(dialogue)
+            #prompt = prompts.rephrase_chat_en(dialogue, sentence)
+        elif params.GPT_MODEL_COMPLETION == "text-davinci-003":
+            prompt = prompts.summary_ja(dialogue)
+        else:
+            logger.error("GPT model name is inappropriate")
+            exit()
+
+        if params.USE_DUMMY == 1:
+            response = utils.dummy_completion(prompt, encoding=self.encoding)
+        else:
+            response = self.openai_api_completion(prompt)
+
+        total_tokens = response.get("usage").get("total_tokens")
+        self.n_total_token += total_tokens
+
+        if params.GPT_MODEL_COMPLETION == "gpt-3.5-turbo":
+            summary_statement = response.get("choices")[0].get("message").get("content")
+        elif params.GPT_MODEL_COMPLETION == "text-davinci-003":
+            summary_statement = response.get("choices")[0].get("text")
+        else:
+            logger.error("GPT model name is inappropriate")
+            exit()
+        summary=[]
+        summary.append(summary_statement)
+        return summary
     
     def calc_similarity(self, sentence1, sentence2):
         params = self.params

@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちわ。良いお天気ですね。どちらへ？
+
+B: 今から、勤め先のレストランに出勤するところです。あなたは？
+
+A: あ、レストランで働いていたんですか。道理で服から良い匂いがすると思いましたよ。私も出勤です。鼻が人よりも効くので芳香剤のメーカーで働いています。
+
+B: あ、匂いしますー？わたしの勤め先って、チャイニーズレストランだから、ごま油の匂いかな？
+
+A: ええそう、良い匂いなんですよね。反対に独特の匂いの食材ってあるじゃないですか。くさやとか。あれは辛いですね。そもそも食べられないです。
+
+B: あー、くさやはわたしもNGです！わたしはまだ見習いシェフなんですが、今度、うちのレストランに来ませんか？
+
+A: あ、是非行きたい！　中華は好きなんですよ。でもご迷惑はないですか？
+
+B: 全然！ウエルカムですよー！わたしの得意料理チャーハンを是非召し上がってください！
+
+A: どうしたらああいう風にパラっと出来るんだろう？　真似しようとして真似できないんですよねえ。
+
+B: あれはコツだけでなく、練習が必要なんですよ。料理は何事も練習練習！あなたは料理をやる方なんですか？
+
+A: \ul{結構する方で、お菓子とか良く作っていました。亡くなった祖母ちゃんが好きだったので。そのせいか線香やマッチの残り香が懐かしく感じる事があるんですよ。}\end{hangall}
+\end{document}  

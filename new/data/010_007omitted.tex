@@ -1,0 +1,37 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。わたし、京都で大学院生をしています。あなたはどんな方ですか？
+
+B: こんにちは！私は、普通の会社で普通のOLをしてるよ。大学院に行くなんて、よっぽど頭が良いんだね！
+
+A: 頭はそんなに良くないですよ。空気を読むことが苦手なので、本当は就職した方が良かったんだろうけど、そのまま進学してしまったんです。
+
+B: いわゆるKYってやつ？そんなこと言うのって、周りの僻みだから無視したほうが良いよ。私、そういう悪口言う人って大嫌い。
+
+A: 本当ですか？そういってもらえると、すごく安心します。わたし、グラマーな体型なので、悪口を言われることも多いんです。
+
+B: あー、スタイルも良いなら、完璧、僻みだって！私も、人よりウエストが細いってだけで、会社で悪口言われたりするもん。
+
+A: \ul{そうなんですね。東北の方は、私行ったことがないので、今度行ってみたいです。}\end{hangall}
+\end{document}  

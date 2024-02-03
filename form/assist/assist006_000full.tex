@@ -1,0 +1,44 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。今、犬を連れて散歩しているんだけど、このあたりで、赤い服を着た女性に会わなかったかい？
+
+B: いや、そんな人はいなかったな、なにかあったのかい？
+
+A: いや、ちょっと人を探しているんだよ。まぁ、会わなかったのなら、かまわないさ。
+
+B: ふーん…実はわたしは自衛隊の仕事をしてましてね。責任感も強いのでそういうの気になるのさ。なにか手伝おうか？
+
+A: いや、大丈夫さ。ところで、自衛隊なのかい？どおりで、身体が丈夫そうなわけだ。わたしは探偵の職業柄、人の特徴にばかり目が行ってしまう。
+
+B: ははは、それは面白いことだ。それならわたしも面白いところがあるぞ、わたしは4月のエイプリルフール生まれなんだよ。
+
+A: エイプリルフール生まれか。ということは、当日に誕生日だと言っても、信じてもらえなかったりするだろう？
+
+B: ああ、もちろんだ。応援団に入っていた時はよく友達からからかわれていたのが悩みだったなぁ。あなたは悩みとかないのかい？
+
+A: 悩みかぁ。片付けが苦手なんだが、そのことくらいだね。依頼者のことは頭の中でしっかり整理できるんだが、机の上はいつもめちゃくちゃさ。
+
+B: それは大変だ。整理整頓は心の落ち着きにもつながるからちゃんとしたほうがいいよ。
+\end{hangall}
+\end{document}  

@@ -1,0 +1,41 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。わたし、目立ってます？身長高いと目立つので、困るんですよね。
+
+B: こんにちは。うーん！目立つと何か困るんですか？
+
+A: 視線を集めているような気がしてしまって。たぶん見られているというのが嫌なんでしょうね。とにかく苦手なんです。
+
+B: ああ、その気持ちは、女性として痛いほど分かります。わたしの場合は、縦じゃなくて横に大きいので、そういう意味で、人にチラチラ見られたりするんですよ。
+
+A: お互い、大変ですね。あぁ、鳥取砂丘のような人がほとんどいない所へ行きたい。あ、鳥取砂丘、わたしのお気に入りなんです。
+
+B: 鳥取砂丘ですか。一度も行ったことがないけど、何か美味しい名品とかあるかしらね？
+
+A: らっきょうがありますよ！最近福島から引っ越してきたんですが、もっと鳥取砂丘から近いところに住みたかったなぁ。
+
+B: へえ、らっきょうですか！今度お取り寄せしてみよっと！いまは、職場近くに住んでたりするんですか？
+
+A: \ul{はい。転勤で引っ越すことになったんです。転勤するなら、鳥取にって、前々から夢を見ていたのに、残念です。}\end{hangall}
+\end{document}  

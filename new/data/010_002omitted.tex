@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: あら、こんにちは。今から、スーパーのパートに行くところなんですよー。
+
+B: こんにちは。そうなんですね。わたしは職場の楽器メーカーに出勤するところです。
+
+A: お勤めご苦労さま。楽器メーカーにお勤めってことは、ご自身もなにか楽器をやるの？
+
+B: いえ、演奏はせず、聴く方専門ですね。音楽鑑賞が趣味なんです。
+
+A: 素敵な趣味ねえ。わたしなんて、貯金が趣味だから、そんな優雅な時間を過ごしたことないわ！
+
+B: そうなんですか？でも、貯金も素敵な趣味だと思いますよー。だって、わたしなんて、音楽の方にお金つぎ込んじゃってますもん。
+
+A: それはそれで、良いお金の使い方だと思うわ。それじゃ、休みの日は、音楽を聞いて過ごす感じなの？
+
+B: はい。特に休みの日の夕暮れ時。あの時間に音楽を聴いていると、とっても懐かしい気分になるんです。
+
+A: そうね、わたしもこの勉強嫌いの硬い頭を叩いて、曲名を思い出す努力をしてみるわ！
+
+B: \ul{仕事終わりが楽しみになってきました！お話しできて良かったです！}\end{hangall}
+\end{document}  

@@ -1,0 +1,49 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。お元気でしたか？
+
+B: はい、元気にしていました。あなたはどうですか？
+
+A: 私も元気にしていました。休みの日には趣味の写真を楽しんでいます。
+
+B: 写真ですか、いいですね。私は海の近くに住んでいるので、よく散歩をしています。
+
+A: 海の近くにお住まいなんですね。綺麗でしょうね。私は山のそばに住んでいます。
+
+B: そうなんですね。山も好きなのですが、沖縄に以前住んでいてどうしても海の近くに住みたくて。
+
+A: 生まれ育った場所に似た場所はなんだか心が落ち着きますよね。私も青森出身なのでお気持ちわかります。
+
+B: そうですよね。しかも私は怒りっぽいので、気持ちを静めるにも海はいいんですよ
+
+A: 自然は心を落ち着かせてくれますよね。私も今度海辺の写真を撮りに行きたいです。
+
+B: はい、海もさまざまな表情を見せますのでとても良いと思います。
+
+A: またおすすめの場所があったらぜひ教えてくださいね。
+
+B: そうなんですね。でも、見るのがお好きなら今度ご披露します
+
+A: \ul{ぜひ、よろしくお願いします。}\end{hangall}
+\end{document}  

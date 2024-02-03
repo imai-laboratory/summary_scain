@@ -1,0 +1,48 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。最近はお元気でしたか？
+
+B: ええ、おかげさまで！　アウトドアやドライブに良い季節ですものねえ、元気が出ますよ！
+
+A: そうですよね！わたしも運動が好きで、最近はよくテニスをするんです。
+
+B: それは良い趣味ですね！　お食事なんかはどうしていますか？
+
+A: 食事は特にこだわりなく、店屋物やスーパーの惣菜などですね、マッサージ師の仕事が忙しいものでして。
+
+B: 知り合いでマッサージの先生がいますが、聞いたら本当に忙しくてトイレにも立てないなんて言ってましたよ。私は人混みが苦手なんで、専ら家の裏庭でＢＢＱをすることが多いです。
+
+A: ああ、BBQもなかなか開放感があって楽しいですよね！肉もおいしいですし。でもわたしは、スポーツ観戦するほうが好きですね。
+
+B: それも良いですね。冷たいモノを飲みながら応援にアツくなってるのは横から見てても楽しそうだものなあ。ご家族はどうしてました？
+
+A: 最近は実家にも帰っていませんが、たまに電話で声を聞く限りは元気でしたね。今は仕事一筋ですから、独身生活を楽しんでいます。
+
+B: 家庭を持つと自由が利かなくなります。私も独りだから趣味であちこちドライブに出られたり出来るようなものです。
+
+A: 一人だと気楽でいいですよね！でも、家族がいたほうがいいかなとも思うんですよ。
+
+B: 責任は産れますが、実際その通りだと思いますよ。
+\end{hangall}
+\end{document}  

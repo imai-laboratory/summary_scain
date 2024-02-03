@@ -1,0 +1,49 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは、寒いのが苦手なんですが、最近かなり冷え込みますよね。調子はいかがですか？
+
+B: こんにちは、外に出にくいですが、じっとしてるのも苦手なので、この時期は辛いです
+
+A: そうですよね、寒いのでよく故郷の静岡産の温かい緑茶を飲んでいます。
+
+B: いいですね。私は生まれも育ちも兵庫で、今は神戸に住んでいます。たまに商店街に行って温かい肉まんとか豚まんをたべます。
+
+A: 兵庫出身なんですね、あまり西日本には行ったことがないかもしれません。
+
+B: そうなんですね。私は旅行が好きで、西日本東日本はもちろん、海外へもよく行っています。通訳の仕事をしているので、語学の勉強のためにも行くことが多いです。
+
+A: すごいですね、グローバルなお仕事をされているんですね。わたしは心理カウンセラーをしていまして、ほとんど旅をすることがありませんね。
+
+B: そうだったんですね。私も以前カウンセラーの方にお世話になったことがあります。
+
+A: そうなんですか？海外みたく、風邪の症状のように気軽に通えるカウンセラーを目指しています。
+
+B: それは素敵ですね。私もできるだけ困っていそうな知り合いがいたら進めるようにはしています。もっと通いやすい場所になるといいですね。
+
+A: そうですね、わたしは水泳が得意なんですが、そういう水泳教室のように、多くの人が集まれる場所にしたいと思っています。
+
+B: 期待してます。
+
+A: \ul{ありがとうございます。}\end{hangall}
+\end{document}  

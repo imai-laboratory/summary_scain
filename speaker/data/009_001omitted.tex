@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: ねえ、あなたってネットオークションってしたことある？
+
+B: ネットショッピングはよくするけど、オークションはまだやったことないなあ。あなたはよくやるの？
+
+A: わたしもなくて、今すごくネットオークションに興味があるの！どんな雰囲気なのかなーと思って！
+
+B: ああ、気になりますよねー。わたし、フリーターだから暇な時間がたくさんあって、サイトだけはよく覗いてるんですよ。
+
+A: へー！今度お話聞かせてくださいよ！今ってどこに住んでらっしゃるんですか？
+
+B: わたしは長いこと長崎に留まってますね。もう何年になるんだろう。あなたは？
+
+A: 長崎かーいいとこだけど遠いなー！わたしは京都在住です。
+
+B: えっ！知りませんでした。いつか上京しようと思ってたんですが、東京や大阪じゃなくて、京都もありだなあ。
+
+A: 例に漏れずわたしもグラマーな体型ですけど実はわたしの周りはそうでもないんであまり期待しない方がいいかもしれませんよ。
+
+B: \ul{いやあ、期待しちゃいますよ。今度、様子を見に、旅行をしてみようかな。}\end{hangall}
+\end{document}  

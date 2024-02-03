@@ -1,0 +1,43 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。わたしは川のそばにある団地に住んでいます。
+
+B: こんにちは！私はスーパー近くのアパート暮らしですよ！
+
+A: スーパー近くって、楽そうで良いですね。わたしも、そういうところに住みたかったなぁ。
+
+B: 便利です！外資系に勤めていることもあり、忙しくて、ついついスーパーの総菜を買ってしまいます。
+
+A: そうですよね。スーパーの総菜って、意外とレベル高くて美味しいですもんね。わたしも鉄道マンで一人暮らしなんで、よくわかります。
+
+B: そうなんですよね！でも大好きな食べ物は、総菜ダメだなと思いました。私にとっておふくろの味のカツ丼を買ってきて食べたんですけど、がっかりしちゃって…。
+
+A: あはは、確かに！おふくろの味には勝てないですもんね！好きな食べ物なら、なおさらですよね。
+
+B: そうなんですよね。ところで、尊敬している人はいますか？私は父親を尊敬しているんです。
+
+A: お父様ですか。きっと素晴らしい人なんですね。わたしは、坂本龍馬を尊敬しています。
+
+B: \ul{確かに、あの行動力は素晴らしい。今の世の中にも坂本龍馬のような人が現れてほしいですね。}\end{hangall}
+\end{document}  

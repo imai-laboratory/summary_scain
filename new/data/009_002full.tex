@@ -1,0 +1,35 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。お元気でしたか？
+
+B: ええ、変わりなく元気ですよ！最近ウニのおいしさに気付きまして。たまの楽しみにしています。
+
+A: ウニですか！豪華ですね。海鮮がお好きなんですか？
+
+B: ええ、大好物です！牡蠣だけは苦手なんですが…。あなたはなにかお好きな食べ物ありますか？
+
+A: そうですね。実は最近夫と死別しまして。なかなか食事が喉を通らないんですよ。あ、暗い話でごめんなさいね。
+
+B: \ul{いえいえ、それは大変でしたね。どうかあまり気を落とさないでください。}\end{hangall}
+\end{document}  

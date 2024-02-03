@@ -1,0 +1,41 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは！最近調子はどうですか？
+
+B: とっても元気です！今は吹奏楽部で、部活を頑張っています！あなたのほうはどうですか？
+
+A: 吹奏楽部ですか！素敵だなあ。私は愛犬と自由気ままに過ごしていますよ。
+
+B: わたしには友だちがたくさんいるのですが、家で一人で居る時に遊んでくれるペットが居たらいいなと思うことがあるので、うらやましいです！
+
+A: 友達がたくさんいるなんて、そっちのほうが羨ましいですよ。そういえば、今の仕事を始めてから友達に久しくあってないなあ。
+
+B: お仕事がきっとお忙しいんですね！どんなお仕事をされているんですか？
+
+A: 探偵事務所をやってるんですよ。片付けが苦手で事務所は散らかり放題なんだけど、今度遊びにきてね。
+
+B: はい！メイクアップアーティストになるのが夢なんです！
+
+A: \ul{かっこいいね！あなたならきっと素敵なメイクアップアーティストになれると思うよ！}\end{hangall}
+\end{document}  

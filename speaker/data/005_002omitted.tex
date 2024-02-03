@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。私は最近、猫を飼い始めました。
+
+B: わあ、羨ましいなあ。私は猫の毛アレルギーだってお母さんが言っていたから飼えないです。飼いたいなあ。猫ちゃん大好き。
+
+A: 猫、かわいいですよ。ふわふわで、もうたまらないです。
+
+B: いいなあ。私のクラスの子達も、飼っている子が大勢なんで、何だか話題に入っていけないなあ。ねえねえ、好きな食べ物って何ですか＞
+
+A: アレルギーなら、ちょっと我慢するしかないよね。好きな食べ物は、１２月生まれだからケーキ。
+
+B: え、１２月生まれはケーキ好きなんだあ。私も１２月だからケーキが好きなのかな。この間ね、お母さんがキャロットケーキってのを作って食べさせようとしたんだけど、私ニンジンが嫌いだから。
+
+A: クリスマス大好きだからね。でも、大晦日生まれ。人参は私も苦手だよ。
+
+B: ホッとしたあ。大人だって嫌いなものありますよね。私身長が低くて並ぶ時も一番前なんですけど、好き嫌いがあってもお姉さんみたいに大きくなれますよね？
+
+A: 同じ趣味で嬉しいよ。今度、ＡＢ型の占いも一緒にみてあげるね。
+
+B: はあい！　また占いのお話聞かせて下さい。あと猫ちゃんもさわりたいです。
+
+A: \ul{ちょっとなら、きっと大丈夫だと思うよ。}\end{hangall}
+\end{document}  

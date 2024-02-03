@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんばんは。すっかり暗くなっちゃって、今から帰宅するのが怖いな。
+
+B: こんばんは。ほんとですね。わたしもお酒苦手なのに、友達にお酒に付き合わされちゃって。帰りがこんな時間になってしまいました。
+
+A: 大人って大変だね。わたし、中学校の放課後学習に行ってたらこんな時間に。お母さん、まだ仕事だろうし、１人で家にいたらお化け出そうで嫌だな！
+
+B: 大人って言っても、わたしも大学生ですから、学生としては一緒ですね！家に帰っても一人って、やっぱり寂しいですよね。
+
+A: うん。うち、お父さんいないし、兄弟もいないから、家で１人でお留守番なの。
+
+B: そうなんですか。わたしも福岡の彼女と遠距離恋愛中なので、本当は同棲したいのに、一人暮らしです。
+
+A: そっかあ。一人暮らしだとさ、ホラー映画とか見たら、眠れなくならない？
+
+B: なりますよ！だから、そういうのは見ないようにして、株取引に集中してるんです。そっちに集中してれば、一人でも大丈夫なので。
+
+A: そっかあ。わたしもスマホで動物の動画でも見ようかな。テレビ見てると、たまにホラー映画やってたりして、怖いんだよね。
+
+B: そうそう、急にチャンネル変更したときに、怖い映像映ったら嫌ですからね！動物でほっこりしていた方が良いですよ。
+
+A: \ul{ありがと！}\end{hangall}
+\end{document}  
