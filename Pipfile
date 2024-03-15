@@ -16,6 +16,7 @@ scipy = "*"
 statsmodels = "*"
 pingouin = "*"
 japanize-matplotlib = "*"
+pyarrow = "*"
 
 [dev-packages]
 ipykernel = "*"
