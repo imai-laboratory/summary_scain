@@ -2,6 +2,9 @@ import os
 import datetime
 import json
 import ast
+import re
+from time import sleep
+from unittest import result
 import openai
 import logging
 import prompts
@@ -64,23 +67,23 @@ class SCAINExtractor(Extractor):
                 continue
 
             full_dialogue = self.dialogue[:idx+1]
-            #logger.debug("------ full dialogue: ")
-            #logger.debug(full_dialogue)
+            logger.debug("------ full dialogue: ")
+            logger.debug(full_dialogue)
             omitted_dialogue = self.dialogue[:idx-2] + self.dialogue[idx:idx+1]
-            #logger.debug("------ ommited dialogue: ")
-            #logger.debug(omitted_dialogue)
+            logger.debug("------ ommited dialogue: ")
+            logger.debug(omitted_dialogue)
             core_sentence = sentence
             for speaker in self.params.SPEAKERS:
                 core_sentence = core_sentence.removeprefix(speaker)
-            #logger.debug("------ core sentence: ")
-            #logger.debug(core_sentence)
+            logger.debug("------ core sentence: ")
+            logger.debug(core_sentence)
 
             full_summary = self.rephrasing(full_dialogue, core_sentence)
-            #logger.debug("------ full summary: ")
-            #logger.debug(full_summary)
+            logger.debug("------ full summary: ")
+            logger.debug(full_summary)
             omitted_summary = self.rephrasing(omitted_dialogue, core_sentence)
-            #logger.debug("------ omitted summary: ")
-            #logger.debug(omitted_summary)
+            logger.debug("------ omitted summary: ")
+            logger.debug(omitted_summary)
 
             similarity = self.calc_similarity(full_summary, omitted_summary)
             result = [self.dialogue_id, idx, full_summary, omitted_summary, similarity]
@@ -92,8 +95,8 @@ class SCAINExtractor(Extractor):
         params = self.params
 
         if params.GPT_MODEL_COMPLETION == "gpt-3.5-turbo":
-            #prompt = prompts.rephrase_chat_ja(dialogue, sentence)
-            prompt = prompts.rephrase_chat_en(dialogue, sentence)
+            prompt = prompts.rephrase_chat_ja(dialogue, sentence)
+            #prompt = prompts.rephrase_chat_en(dialogue, sentence)
         elif params.GPT_MODEL_COMPLETION == "text-davinci-003":
             prompt = prompts.summary_comp_ja(dialogue, sentence)
         else:
@@ -136,7 +139,7 @@ class SCAINExtractor(Extractor):
         
         return similarity
     
-class ImportantExtractoror(Extractor):
+class ImportantExtractor(Extractor):
     def evaluate(self):
         important_sentences = self.detect_important_sentences(self.dialogue)
         result = [self.dialogue_id] + important_sentences # [self.dialogue_id, important_sentence_id[1], important_sentence_id[2]]

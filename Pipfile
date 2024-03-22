@@ -17,6 +17,7 @@ statsmodels = "*"
 pingouin = "*"
 japanize-matplotlib = "*"
 pyarrow = "*"
+flask = "*"
 
 [dev-packages]
 ipykernel = "*"
