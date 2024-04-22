@@ -1,0 +1,47 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは、最近趣味のネットサーフィンにはまってるんですが、何かハマっているものはありますか？
+
+B: こんにちは。わたしは、音楽鑑賞が趣味なので、毎日音楽を聴いています。
+
+A: 音楽鑑賞も楽しいですよね！わたしはドラックストアの店員なんですが、遅刻魔なもので、よく遅刻しては怒られてます。
+
+B: 音楽好きが極まって、楽器メーカーに勤務しています。ドラッグストア、お仕事大変そうなので寝坊するのもわかる気がします。
+
+A: すごい！楽器に精通していそうですね。音楽以外では何か他に趣味とかあるんですか？
+
+B: 他には趣味はないんですが、秋の紅葉が好きでよく見に行きます。夕暮れ時が特に懐かしく感じられてよいんですよ。
+
+A: へえ、自然鑑賞もまた風流な感じがしますね。わたしは栃木に実家があるんですが、栃木の秋の紅葉は美しいですよ。
+
+B: 栃木の紅葉、見に行ったことがあります！実は、群馬出身なんですよ。
+
+A: そうなんですね！すぐ近県ですね。わたしも群馬県に行ったことあります。
+
+B: 今度機会があったら、一緒に紅葉を観に行けたらよいですね。
+
+A: そうですね、ぜひご一緒したいものです。
+
+B: \ul{また紅葉の頃、お休みの日をお知らせしますね。}\end{hangall}
+\end{document}  

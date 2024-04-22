@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは！いやあ、徳島に移住してきて本当に正解だった！いいところだね、徳島は。
+
+B: そうなの？わたしずっと大阪在住で徳島って行ったことないんだけど阿波踊りのイメージしかないな。
+
+A: いや、都会に比べて、全然人が少ないんだよ。それが何よりもいいところだね！
+
+B: なるほど。それはいいかも。わたしは翻訳家なので都会の喧騒よりは落ち着いた場所で仕事をしたいしね。あなたは最近お仕事は？
+
+A: 仕事は順調だよ。わたしがキャリアコンサルしたクライアントが、メキメキ成功しだしてるんだ！
+
+B: それは順調だね！今度うちに来た時は大したことないけどわたしの得意料理のたこ焼きでパーティーでもしよう！
+
+A: たこパー、いいね！たこ焼き好きってことは、関西出身だったりして！
+
+B: ずーっと関西だよ、あなたは元々の出身はどこなの？
+
+A: わたしは関東出身で徳島に移住したの。でも関西人って、ソースの味の違いが分かるってホント？
+
+B: むしろわからないの？関西人には当たり前のことだよ
+
+A: \ul{全然オッケー！楽しみにしてるね！}\end{hangall}
+\end{document}  

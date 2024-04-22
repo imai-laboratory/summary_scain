@@ -1,0 +1,41 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは。夏って、なんでこんなに暑くて、雷が多いんだろう。
+
+B: そうですねー。こういう季節って、熱中症で救急車を呼ぶ人が多くて、救急救命士としては、ほんとに忙しいんですよ。
+
+A: そういうお仕事されてる方なんですね。それは忙しいですよね。わたし、雷が苦手なんで、夏って嫌いなんです。せっかく誕生日があるのに。
+
+B: それは悲しいですね。それじゃ、夏には、いい思い出があまりないんですか？
+
+A: ないんです。地図が読めないほどの方向音痴なのに、友達とバーベキューして、沢で迷子になったこともあります。
+
+B: それは大変な思いをしましたね。わたしは夏は結構好きなんですけどねえ。仕事は忙しいですが、夏は恋の季節ですからね！
+
+A: 恋の季節、ですか？
+
+B: そうそう！彼女募集中の身としては、海に繰り出したり、生まれ育った横浜の港で、ナンパしまくるんです！
+
+A: \ul{わ、チャラい！でも、なんだか、今どきの若者？第七世代？って感じがしますね。}\end{hangall}
+\end{document}  

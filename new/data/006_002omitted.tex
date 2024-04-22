@@ -1,0 +1,41 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: 初めまして。わたし新聞社に勤めるているものなんですが、いくつかお聞きしてもいいですか？
+
+B: はい！いいですよ。なんでしょう？
+
+A: ありがとうございます。では、DINKsってご存知ですか？
+
+B: ああ、あれですよね、子どもを持たない主義の夫婦！
+
+A: よくご存知ですね！そうです。共働きで子供を持つつもりのない夫婦のことなんですけど、これについての記事を書こうと思っていまして。実はわたしもそのDINKsなんですよね。
+
+B: そうなんですか！わたしは独身貴族なので、何かをいう権利はないと思いますが、既婚子持ちの妹からすると、ありえない！と怒られそうです。
+
+A: そういう意見も取り入れたいと思ってるので遠慮なく言ってください。わたしの話になるんですが、実はわたし離婚歴もあって。仕事に生きようと思っていたら今の夫に出会ったんです。
+
+B: おや、素敵な話じゃないですか。でも、子どもは持たないのは、理由があるんですか？
+
+A: \ul{そうですか。男性の意見も聞きたかったんです。}\end{hangall}
+\end{document}  

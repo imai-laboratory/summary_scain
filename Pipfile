@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "==0.28"
+tiktoken = "*"
+requests = "*"
+openpyxl = "*"
+xlrd = "*"
+pandas = "*"
+numpy = "*"
+matplotlib = "*"
+scipy = "*"
+statsmodels = "*"
+pingouin = "*"
+flask = "*"
+notebook = "*"
+natsort = "*"
+
+[dev-packages]
+ipykernel = "*"
+
+[requires]
+python_version = "*"
+
+[scripts]
+extraction = "python ./src/extraction.py"
+setup = "python ./src/setup.py"
+assistant = "python ./src/assistant.py"
+topic = "python ./src/extraction_topic.py"

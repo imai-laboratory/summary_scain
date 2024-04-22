@@ -1,0 +1,37 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: こんにちは、最近困っていることがあるんです、聞いてくれませんか？
+
+B: そうなんですね。どうしたんですか？
+
+A: 私はセロリが大嫌いなんだ、でも蛇年の私はセロリがラッキーフードなんだ。
+
+B: なんてことでしょう！でもラッキーを手に入れるためには、その苦手な物を克服しないとですね。
+
+A: そうなんですよ…あなたは苦手なものがありますか？
+
+B: 私は虫が苦手なんです。でも、キャンプに興味があるので、がんばって虫を克服しようかと思っています。
+
+A: \ul{そうなんですか！今度ぜひ教えてほしいです！}\end{hangall}
+\end{document}  

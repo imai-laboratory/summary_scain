@@ -1,0 +1,45 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: ねえねえ、あなたって今住んでるところで、生まれ育った？
+
+B: 今住んでるところは違うよ。出身は和歌山なんだ。
+
+A: そうなんだー。わたしは今神戸で、兵庫県以外で暮らしたことがないんだよねー。ほかの県にも住んだことある？
+
+B: 住んだことはないんだけど、アニメの聖地巡礼をよくやってるから、色んな県に行くことはあるよ。
+
+A: いいなあ！わたし、通訳って職業柄、海外旅行にはよく行くんだけど、考えてみたら、日本のことをあまり知らなくてさあ。
+
+B: そうなんだー。でも、わたしも日本のことはよく知らないなぁ。アニメに関係してればわかるんだけどね。
+
+A: それで十分だよ。だって、海外からしたら、アニメって日本の代名詞みたいなものだと思わない？
+
+B: 確かにそうかも。最近は外国人のアニメ友達も増えたしなぁ。その人たちとね、休日に好きなツーリングを楽しんだりもするんだ。
+
+A: そうなんだね！わたしもジッとしてられないほうだから、気が合うかもね、わたしたち！
+
+B: そうだといいなぁ。人からよく、お前マイペースだなって言われてるけど、意外と気が合うのかもね。
+
+A: \ul{うん、絶対そう思う！}\end{hangall}
+\end{document}  

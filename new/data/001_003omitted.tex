@@ -1,0 +1,41 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: あなたって高校のとき何か部に所属してた？
+
+B: ううん。帰宅部だったよ。あなたは？
+
+A: わたしは漫研に入ってたんだ。あなたは漫画とか読む？
+
+B: 漫画は、新聞についてる4コマ漫画が好き！新聞配達員をしてるから、毎日読み放題！
+
+A: それはいいね。４コマ漫画の面白さを知ってるあなたは上級者だよ。わたし実は先日、ゲーム制作会社に就職が決まったんだ。ゲームはやる？
+
+B: あー、石焼い芋って美味しいよねー！その屋台で、よく買ってたの？
+
+A: そうなんだよ。大好きでさ。今でもあの石焼き芋の歌を聞くと懐かしく感じるんだよね。あなたにはそういうのない？
+
+B: あるある！学生時代は海の近くの街に住んでて、通学の時に海沿いの道を自転車で通ってたから、今でも海の匂いを嗅ぐと、当時が蘇るよ！
+
+A: \ul{わたしと違ってなんだかかっこいい思い出だね。アニメオタクには眩しいよ。}\end{hangall}
+\end{document}  

@@ -1,0 +1,37 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a3paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{udline}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\renewcommand{\baselinestretch}{1.5}
+\newenvironment{hangall}[1]{\hangindent = 2.5zw\everypar{\hangindent = 2.5zw}}{}
+
+\title{}
+\author{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}  
+\begin{hangall}{}%
+A: ねえ、やっぱりわたしって身長高い方だよね？
+
+B: んー、そう？わたしは男だから、あんまり人の身長を気にしたことがなかったけど。
+
+A: そう言ってくれる人がいてよかった！また身長が伸びたみたいでさ。わたし目立つことが嫌いなのにこの身長のせいですごく目立ってしまってる気がする。
+
+B: そう言われれると、たしかにわたしも細すぎる体型がコンプレックスかもしれないなあ。
+
+A: あなたこそモデル体型だと思うけど。
+
+B: いやあ、男が細いのは、カッコがつかないよ。サイクリングが好きで、ついつい食べるのを忘れて走り続けちゃうからかな。
+
+A: \ul{だから細いのね。わたしは福島から引っ越してきてこっちの人ってみんなスタイルがいいから驚いたわ。}\end{hangall}
+\end{document}  
