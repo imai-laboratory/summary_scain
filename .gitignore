@@ -3,7 +3,12 @@ dat/*
 log/*
 results/*
 forms/*
+form/*
+img/*
+speaker/*
 tmp/*
+.ipynb_checkpoints/*
+.idea/*
 .\#*
 *~
 !.gitkeep
